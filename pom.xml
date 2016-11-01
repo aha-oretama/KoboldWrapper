@@ -5,7 +5,12 @@
 
     <groupId>aha-oretama.jp</groupId>
     <artifactId>KoboldWrapper</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+
+    <name>KoboldWrapper</name>
+    <url>https://github.com/aha-oretama/KoboldWrapper</url>
+
     <build>
         <plugins>
             <plugin>
@@ -18,7 +23,7 @@
             </plugin>
 
             <plugin>
-                <groupId>org.codehaus.groovy.maven</groupId>
+                <groupId>org.codehaus.gmaven</groupId>
                 <artifactId>gmaven-plugin</artifactId>
                 <version>1.5</version>
                 <extensions>true</extensions>
@@ -44,22 +49,47 @@
                     <dependency>
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-all</artifactId>
-                        <version>2.4.6
-                        </version>
+                        <version>2.4.6</version>
                     </dependency>
                 </dependencies>
             </plugin>
+
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <!-- Git コミットメッセージ -->
+                    <message>Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <!-- distributionManagement の url と一致させる -->
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+                    <!-- リモートブランチ名 -->
+                    <branch>refs/heads/mvn-repo</branch>
+                    <includes><include>**/*</include></includes>
+                    <!-- Github リポジトリ名 -->
+                    <repositoryName>KoboldWrapper</repositoryName>
+                    <!-- Github リポジトリユーザー名 -->
+                    <repositoryOwner>aha-oretama</repositoryOwner>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-    <packaging>jar</packaging>
-
-    <name>KoboldWrapper</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <github.global.server>github</github.global.server>
     </properties>
 
     <dependencies>
@@ -96,6 +126,17 @@
             <version>1.0-groovy-2.4</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
+
+
+    <distributionManagement>
+        <repository>
+            <id>internal.repos</id>
+            <name>Temporary Staging Repository</name>
+            <url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+
+    </distributionManagement>
 
 </project>
