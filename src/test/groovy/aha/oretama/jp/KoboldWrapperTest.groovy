@@ -1,5 +1,6 @@
 package aha.oretama.jp
 
+import aha.oretama.jp.model.Kobold
 import spock.lang.Specification
 
 class KoboldWrapperTest extends Specification {
@@ -50,6 +51,14 @@ class KoboldWrapperTest extends Specification {
 
     then:
     koboldWrapper.execCommand('test') == 'kobold --fail-additions test'
+  }
+
+  def 'test'() {
+    expect:
+    Kobold kobold = new KoboldWrapper()
+            .failOrphans()
+            .failAdditios()
+            .run("src/test/resources/images")
   }
 
 }
