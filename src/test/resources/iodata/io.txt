@@ -1,0 +1,26 @@
+
+[0m[0m
+[32m  ✓[0m[90m initialize tests [0m
+[0m  Kobold[0m
+[0m    YDN - Orphans[0m
+    [31m  1) is orphaned[0m
+[0m    YDN - Orphans2[0m
+    [31m  2) is orphaned[0m
+[0m    YDN - Addition[0m
+    [31m  3) is an addition[0m
+[0m    YDN - Addition2[0m
+    [31m  4) is an addition[0m
+[0m    YDN - Color[0m
+    [32m  ✓[0m[90m should load the approved screen [0m
+    [32m  ✓[0m[90m should load the build screen [0m
+    [32m  ✓[0m[90m should load the configuration of screen [0m
+    [31m  5) should be similar[0m
+[0m    YDN - Upper[0m
+    [32m  ✓[0m[90m should load the approved screen [0m
+    [32m  ✓[0m[90m should load the build screen [0m
+    [32m  ✓[0m[90m should load the configuration of screen [0m
+    [31m  6) should be similar[0m
+
+
+[92m [0m[32m 7 passing[0m[90m (3s)[0m
+

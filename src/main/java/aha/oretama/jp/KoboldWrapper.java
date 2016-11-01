@@ -1,10 +1,10 @@
 package aha.oretama.jp;
 
-import java.io.BufferedReader;
+import aha.oretama.jp.mapper.IOKoboldMapper;
+import aha.oretama.jp.model.Kobold;
+
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 public class KoboldWrapper {
 
@@ -18,41 +18,13 @@ public class KoboldWrapper {
     command = new StringBuilder(koboldPath);
   }
 
-  public void run(String path) throws IOException {
+  public Kobold run(String path) throws IOException {
     if(!new File(path).exists()) {
       throw new IllegalArgumentException("Folder not exists.");
     }
 
-    String com = execCommand(path);
-    System.out.println(com);
-    Process process = Runtime.getRuntime().exec(com);
-    InputStream inputStream = process.getInputStream();
-    InputStream errorStream = process.getErrorStream();
-
-    try(BufferedReader reader = new BufferedReader(new InputStreamReader((inputStream)))){
-
-      String line;
-      while((line = reader.readLine()) != null){
-        System.out.println(line);
-      }
-    }finally {
-      if(inputStream != null) {
-        inputStream.close();
-      }
-    };
-
-    try(BufferedReader reader = new BufferedReader(new InputStreamReader((errorStream)))){
-
-      String line;
-      while((line = reader.readLine()) != null){
-        System.out.println(line);
-      }
-    }finally {
-      if(errorStream != null) {
-        inputStream.close();
-      }
-    };
-
+    Process process = Runtime.getRuntime().exec(execCommand(path));
+    return new IOKoboldMapper(process.getInputStream(),process.getErrorStream()).getKobold();
   }
 
   private String execCommand(String path){

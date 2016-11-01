@@ -1,0 +1,79 @@
+[31m  6 failing[0m
+
+[0m  1) Kobold YDN - Orphans is orphaned:
+[0m[31m     Error: Approved screen is orphaned: YDN_Orphans[0m[90m
+      at Context.<anonymous> (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/lib/kobold.js:224:13)
+      at callFn (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runnable.js:249:21)
+      at Test.Runnable.run (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runnable.js:242:7)
+      at Runner.runTest (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:373:10)
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:451:12
+      at next (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:298:14)
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:308:7
+      at next (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:246:23)
+      at Immediate.<anonymous> (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:275:5)
+      at runCallback (timers.js:574:20)
+      at tryOnImmediate (timers.js:554:5)
+      at processImmediate [as _immediateCallback] (timers.js:533:5)
+[0m
+[0m  2) Kobold YDN - Orphans2 is orphaned:
+[0m[31m     Error: Approved screen is orphaned: YDN_Orphans2[0m[90m
+      at Context.<anonymous> (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/lib/kobold.js:224:13)
+      at callFn (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runnable.js:249:21)
+      at Test.Runnable.run (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runnable.js:242:7)
+      at Runner.runTest (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:373:10)
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:451:12
+      at next (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:298:14)
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:308:7
+      at next (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:246:23)
+      at Immediate.<anonymous> (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:275:5)
+      at runCallback (timers.js:574:20)
+      at tryOnImmediate (timers.js:554:5)
+      at processImmediate [as _immediateCallback] (timers.js:533:5)
+[0m
+[0m  3) Kobold YDN - Addition is an addition:
+[0m[31m     Error: Screen is new: YDN_Addition[0m[90m
+      at Context.<anonymous> (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/lib/kobold.js:264:13)
+      at callFn (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runnable.js:249:21)
+      at Test.Runnable.run (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runnable.js:242:7)
+      at Runner.runTest (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:373:10)
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:451:12
+      at next (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:298:14)
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:308:7
+      at next (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:246:23)
+      at Immediate.<anonymous> (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:275:5)
+      at runCallback (timers.js:574:20)
+      at tryOnImmediate (timers.js:554:5)
+      at processImmediate [as _immediateCallback] (timers.js:533:5)
+[0m
+[0m  4) Kobold YDN - Addition2 is an addition:
+[0m[31m     Error: Screen is new: YDN_Addition2[0m[90m
+      at Context.<anonymous> (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/lib/kobold.js:264:13)
+      at callFn (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runnable.js:249:21)
+      at Test.Runnable.run (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runnable.js:242:7)
+      at Runner.runTest (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:373:10)
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:451:12
+      at next (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:298:14)
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:308:7
+      at next (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:246:23)
+      at Immediate.<anonymous> (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/mocha/lib/runner.js:275:5)
+      at runCallback (timers.js:574:20)
+      at tryOnImmediate (timers.js:554:5)
+      at processImmediate [as _immediateCallback] (timers.js:533:5)
+[0m
+[0m  5) Kobold YDN - Color should be similar:
+[0m[31m     Error: Screens are different for YDN_Color[0m[90m
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/lib/kobold.js:453:12
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/promise/lib/core.js:33:15
+      at flush (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/asap/asap.js:27:13)
+      at _combinedTickCallback (internal/process/next_tick.js:67:7)
+      at process._tickCallback (internal/process/next_tick.js:98:9)
+[0m
+[0m  6) Kobold YDN - Upper should be similar:
+[0m[31m     Error: Screens are different for YDN_Upper[0m[90m
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/lib/kobold.js:453:12
+      at /Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/promise/lib/core.js:33:15
+      at flush (/Users/sekineyasufumi/.nodebrew/node/v6.4.0/lib/node_modules/kobold/node_modules/asap/asap.js:27:13)
+      at _combinedTickCallback (internal/process/next_tick.js:67:7)
+      at process._tickCallback (internal/process/next_tick.js:98:9)
+[0m
+

@@ -1,13 +1,14 @@
 package aha.oretama.jp.model;
 
-import lombok.Data;
+import lombok.Value;
 
 import java.util.List;
 
-@Data
+@Value
 public class Kobold {
 
   private List<String> additions;
   private List<String> orphans;
   private List<String> differences;
+
 }
