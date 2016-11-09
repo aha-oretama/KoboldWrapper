@@ -46,4 +46,7 @@ Add following in your pom.xml.
     > "kobold --approved-folder approvedFolder --build-folder buildFolder --highlight-folder highlightFolder --config-folder configFolder --fail-orphans --fail-additions
 ```
 
+### Notification
+[yahoo/blink-diff](https://github.com/yahoo/blink-diff) on which kobold depends supports only PNGs.
+Therefore, KoboldWrapper also supports only PNGs.
 
