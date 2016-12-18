@@ -5,7 +5,7 @@
 
     <groupId>aha-oretama.jp</groupId>
     <artifactId>KoboldWrapper</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
     <name>KoboldWrapper</name>
     <url>https://github.com/aha-oretama/KoboldWrapper</url>
@@ -42,7 +42,7 @@
                         <configuration>
                             <sources>
                                 <fileset>
-                                    <directory>${pom.basedir}/src/test/java</directory>
+                                    <directory>${pom.basedir}/src/test/groovy</directory>
                                     <includes>
                                         <include>**/*.groovy</include>
                                     </includes>
