@@ -20,7 +20,7 @@ public class IOKoboldMapper {
   private static final String FILE_EXTENSTION = ".png";
   private static final String ENCODING = "UTF-8";
 
-  public IOKoboldMapper(InputStream ioStream, InputStream errorStream,boolean fileExtensions){
+  public IOKoboldMapper(InputStream ioStream, InputStream errorStream, boolean fileExtensions) {
 
     this.fileExtensions = fileExtensions;
     try {

@@ -8,15 +8,13 @@ import spock.lang.Specification
  */
 class IOKoboldMapperTest extends Specification {
 
-  IOKoboldMapper mapper
-
   private static final String INPUT = "src/test/resources/iodata/io.txt"
   private static final String ERROR = "src/test/resources/iodata/error.txt"
 
 
   def 'getAdditions'() {
     setup:
-    mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
+    IOKoboldMapper mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
     List list = mapper.getAdditions()
 
     expect:
@@ -31,7 +29,7 @@ class IOKoboldMapperTest extends Specification {
 
   def 'getOrphans'() {
     setup:
-    mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
+    IOKoboldMapper mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
     List list = mapper.getOrphans()
 
     expect:
@@ -46,7 +44,7 @@ class IOKoboldMapperTest extends Specification {
 
   def 'getDifferences'() {
     setup:
-    mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
+    IOKoboldMapper mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
     List list = mapper.getDifferences()
 
     expect:
@@ -61,7 +59,7 @@ class IOKoboldMapperTest extends Specification {
 
   def 'getKobold'() {
     setup:
-    mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
+    IOKoboldMapper mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
     Kobold kobold = mapper.getKobold()
 
     expect:
