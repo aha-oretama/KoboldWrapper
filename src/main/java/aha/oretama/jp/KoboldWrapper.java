@@ -9,6 +9,7 @@ import java.io.IOException;
 public class KoboldWrapper {
 
   private StringBuilder command;
+  private boolean fileExtensions = false;
 
   public KoboldWrapper() {
     command = new StringBuilder("kobold");
@@ -24,7 +25,7 @@ public class KoboldWrapper {
     }
 
     Process process = Runtime.getRuntime().exec(execCommand(path));
-    return new IOKoboldMapper(process.getInputStream(),process.getErrorStream()).getKobold();
+    return new IOKoboldMapper(process.getInputStream(), process.getErrorStream(), fileExtensions).getKobold();
   }
 
   private String execCommand(String path){
@@ -58,6 +59,11 @@ public class KoboldWrapper {
 
   public KoboldWrapper failAdditios() {
     command.append(" --fail-additions");
+    return this;
+  }
+
+  public KoboldWrapper addFileExtentions(boolean fileExtensions) {
+    this.fileExtensions = fileExtensions;
     return this;
   }
 

@@ -67,4 +67,19 @@ class KoboldWrapperTest extends Specification {
     then:
     koboldWrapper.execCommand('test') == 'kobold --fail-additions test'
   }
+
+  def 'addFileExtentions'() {
+    when:
+    KoboldWrapper koboldWrapper = new KoboldWrapper().addFileExtentions(args)
+
+    then:
+    koboldWrapper.fileExtensions == expect
+
+    where:
+    args  || expect
+    true  || true
+    false || false
+
+  }
+
 }

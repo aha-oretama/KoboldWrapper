@@ -15,11 +15,14 @@ public class IOKoboldMapper {
 
   private String ioString;
   private String errorString;
+  private boolean fileExtensions = false;
 
+  private static final String FILE_EXTENSTION = ".png";
   private static final String ENCODING = "UTF-8";
 
-  public IOKoboldMapper(InputStream ioStream, InputStream errorStream){
+  public IOKoboldMapper(InputStream ioStream, InputStream errorStream,boolean fileExtensions){
 
+    this.fileExtensions = fileExtensions;
     try {
       this.ioString = IOUtils.toString(ioStream, ENCODING);
       this.errorString = IOUtils.toString(errorStream, ENCODING);
@@ -51,7 +54,7 @@ public class IOKoboldMapper {
 
     List<String> matchList = new ArrayList<>();
     while(matcher.find()) {
-      matchList.add(matcher.group(1));
+      matchList.add(fileExtensions ? matcher.group(1) + FILE_EXTENSTION : matcher.group(1));
     }
 
     return matchList;

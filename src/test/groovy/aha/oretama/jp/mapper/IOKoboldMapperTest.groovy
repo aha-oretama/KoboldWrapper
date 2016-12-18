@@ -10,39 +10,58 @@ class IOKoboldMapperTest extends Specification {
 
   IOKoboldMapper mapper
 
-  def setup() {
-    mapper = new IOKoboldMapper(new FileInputStream(new File("src/test/resources/iodata/io.txt")),new FileInputStream(new File("src/test/resources/iodata/error.txt")))
-  }
+  private static final String INPUT = "src/test/resources/iodata/io.txt"
+  private static final String ERROR = "src/test/resources/iodata/error.txt"
+
 
   def 'getAdditions'() {
     setup:
+    mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
     List list = mapper.getAdditions()
 
     expect:
-    list.get(0) == 'YDN_Addition'
-    list.get(1) == 'YDN_Addition2'
+    list.get(0) == file0
+    list.get(1) == file1
+
+    where:
+    fileExtentions || file0 | file1
+    false          || 'YDN_Addition' | 'YDN_Addition2'
+    true           || 'YDN_Addition.png' | 'YDN_Addition2.png'
   }
 
   def 'getOrphans'() {
     setup:
+    mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
     List list = mapper.getOrphans()
 
     expect:
-    list.get(0) == 'YDN_Orphans'
-    list.get(1) == 'YDN_Orphans2'
+    list.get(0) == file0
+    list.get(1) == file1
+
+    where:
+    fileExtentions || file0 | file1
+    false          || 'YDN_Orphans' | 'YDN_Orphans2'
+    true           || 'YDN_Orphans.png' | 'YDN_Orphans2.png'
   }
 
   def 'getDifferences'() {
     setup:
+    mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
     List list = mapper.getDifferences()
 
     expect:
-    list.get(0) == 'YDN_Color'
-    list.get(1) == 'YDN_Upper'
+    list.get(0) == file0
+    list.get(1) == file1
+
+    where:
+    fileExtentions || file0 | file1
+    false          || 'YDN_Color' | 'YDN_Upper'
+    true           || 'YDN_Color.png' | 'YDN_Upper.png'
   }
 
   def 'getKobold'() {
     setup:
+    mapper = new IOKoboldMapper(new FileInputStream(new File(INPUT)), new FileInputStream(new File(ERROR)), fileExtentions)
     Kobold kobold = mapper.getKobold()
 
     expect:
@@ -50,6 +69,12 @@ class IOKoboldMapperTest extends Specification {
     kobold.orphans.size() == 2
     kobold.differences.size() == 2
 
+    where:
+    fileExtentions || _
+    false          || _
+    true           || _
+
   }
+
 
 }
