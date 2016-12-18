@@ -1,9 +1,24 @@
 package aha.oretama.jp
 
-import aha.oretama.jp.model.Kobold
 import spock.lang.Specification
 
 class KoboldWrapperTest extends Specification {
+
+  def 'constructor_noArgs'() {
+    when:
+    KoboldWrapper koboldWrapper = new KoboldWrapper()
+
+    then:
+    koboldWrapper.execCommand('test') == 'kobold test'
+  }
+
+  def 'constructor_withArgs'() {
+    when:
+    KoboldWrapper koboldWrapper = new KoboldWrapper("./kobold")
+
+    then:
+    koboldWrapper.execCommand('test') == './kobold test'
+  }
 
   def 'approved'() {
     when:
@@ -52,13 +67,4 @@ class KoboldWrapperTest extends Specification {
     then:
     koboldWrapper.execCommand('test') == 'kobold --fail-additions test'
   }
-
-  def 'test'() {
-    expect:
-    Kobold kobold = new KoboldWrapper()
-            .failOrphans()
-            .failAdditios()
-            .run("src/test/resources/images")
-  }
-
 }
